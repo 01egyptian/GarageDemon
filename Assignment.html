@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARAGEDEMON - Your One-Stop Shop for FIRE Cars</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+           padding: 20px;
+            max-height: 200px;
+            size: static;
+        }
+
+  .header__logo {
+            flex: 0 0 200px;
+        }
+
+  .header__logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+  .header__nav {
+            flex: 1;
+        }
+
+  .header__nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+  .header__nav li {
+            margin-right: 20px;
+        }
+
+  .header__nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+  .header__cta {
+            flex: 0 0 200px;
+        }
+
+        .disp {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        /* Hero Section Styles */
+  .hero {
+            background-image: url(images/Dodge-Challenger-Demon-Wallpaper-46696.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* Button Styles */
+  .btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 20px 20px;
+            margin-left: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+  .btn:hover {
+            background-color: #444;
+        }
+
+        /* Features Section Styles */
+  .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+  .feature {
+            margin: 20px;
+            width: 250px;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+  .feature h2 {
+            margin-top: 0;
+        }
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+           text-align: left;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+
+        /* Search Bar Styles */
+  .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 50%;
+           margin-bottom: 20px;
+        }
+
+  .search-bar input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            margin-left: 350PX;
+        }
+
+  .search-bar input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px #444;
+        }
+        
+
+  .search-bar button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-left: 1px solid #ccc;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+  .search-bar button:hover {
+            background-color: #333;
+        }
+        .feature.active {
+    background-color: #444;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+}
+nav{
+font-size: 20px;
+margin-inline-start: initial;
+padding-right: 400PX;
+}
+    </style>
+</head>
+<body>
+    <header>
+       
+       
+        <div class="search-bar">
+            <nav><h1>GARAGE DEMON</h1></nav>
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-btn" type="button">Search</button>
+           
+          </div>
+         
+        
+    </header>
+    
+    <div class="hero">
+        <h1>Choose Your Dream Car Today!</h1>
+        <button id="cta-btn" class="btn"> Our Inventory</button>
+        
+    </div>
+    
+    <section class="features">
+        <div class="feature">
+            <h2>BMW</h2>
+            <p>The M8 is a really grand, grand tourer. It looks and operates as you'd expect of a peak BMW.</p>
+            <img class="disp" src="images/bmw-m8-competition-coupe-by-manhart.jpg" alt="LAMBOGHINI URUS"/></a>
+        </div>
+        <div class="feature">
+            <h2>PORSHE</h2>
+            <p>Experience the new 911 GT3 RS in top form — with increased race track performance.</p>
+            <img class="disp" src="images/porsche-gt3-rs-review-2023-04-tracking-front-low.webp" alt="LAMBOGHINI URUS"/></a>
+        </div>
+        <div class="feature">
+            <h2>ROLLS ROYCE</h2>
+            <p>No automobile shouts the presence of Old Money louder than the Rolls-Royce Phantom.</p>
+            <img class="disp" src="images/1690816565H2.jpg" alt="LAMBOGHINI URUS"/></a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; MAKE A RIGHT CHOICE BROSKI.</p>
+    </footer>
+    
+    <script>
+        // Get all the feature elements
+    const features = document.querySelectorAll('.feature')
+
+// Add a click event listener to each feature element
+features.forEach((feature) => {
+    feature.addEventListener('click', () => {
+        // Toggle the active class on the clicked feature element
+        feature.classList.toggle('active')
+
+        // Remove the active class from all other feature elements
+        features.forEach((otherFeature) => {
+            if (otherFeature !== feature) {
+                otherFeature.classList.remove('active')
+            }
+        })
+    })
+})
+        // Get the call-to-action button
+        const ctaBtn = document.getElementById('cta-btn');
+
+        // Add a click event listener to the button
+        ctaBtn.addEventListener('click', () => {
+            // Scroll to the features section
+            document.querySelector('.features').scrollIntoView({ behavior: 'smooth' });
+        });
+
+          const searchInput = document.getElementById('search-input');
+        // Add an event listener to the search button
+        document.getElementById('search-btn').addEventListener('click', () => {
+            // Get the search query
+            const query = searchInput.value.toLowerCase();
+
+            // Loop through each feature element
+            features.forEach((feature) => {
+                // Get the feature title and description
+                const title = feature.querySelector('h2').innerText.toLowerCase();
+                const desc = feature.querySelector('p').innerText.toLowerCase();
+
+                // Check if the query matches the title or description
+                if (title.includes(query) || desc.includes(query)) {
+                    // Add the active class to the feature
+                    feature.classList.add('active');
+                } else {
+                    // Remove the active class from the feature
+                    feature.classList.remove('active');
+                    
+                }
+            });
+        });
+    
+// Add an event listener to the search button
+document.getElementById('search-btn').addEventListener('click', () => {
+    // Get the search query
+    const query = searchInput.value.toLowerCase();
+
+    // Loop through each feature element
+    features.forEach((feature) => {
+        // Get the feature title and description
+        const title = feature.querySelector('h2').innerText.toLowerCase();
+        const desc = feature.querySelector('p').innerText.toLowerCase();
+
+        // Check if the query matches the title or description
+        if (title.includes(query) || desc.includes(query)) {
+            // Scroll to the feature element
+            feature.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
